@@ -1,4 +1,6 @@
 - name: pink plabook
+  hosts: web
   tasks:
   - name: ping the server
+   ansible.builin.ping:
     
