@@ -1,11 +1,12 @@
-- name: install and run nginx
-  hosts: web
+- name: install and run nginx 
+  hosts: web # whitch host
+  become: yes #for root 
   tasks:
-    - name: install nginx package
-      ansible.builtin.playbook:
-        name: nginx
-        state: present
-    - name: run nginx
-      ansible.builtin.service:
-        name: nginx
-        state: started 
+  - name: install nginx package #task1
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: run nginx # task 2
+    ansible.builtin.service:
+      name: nginx
+      state: started 
