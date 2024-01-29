@@ -1,8 +1,8 @@
 - name: checking data types
   hosts: localhost
   vars:
-    NAME: Susmitha #key value
-    SKILS:  # skils is list type
+    NAME: Shiva #key value
+    Skills:  # skils is list type
     - Devops
     - Shell
     - Ansible
@@ -17,10 +17,10 @@
       msg: "name: {{NAME}}"
   - name: print list
     ansible.builtin.debug:
-      msg: "Skils: {{SKILS}}" 
+      msg: "Skills: {{skills}}" 
    - name: print map
     ansible.builtin.debug:
-      msg: "Experience: {{EXPERIENCE}}"
+      msg: "Experience: {{Experience}}"
 
   - name: print boolen
     ansible.builtin.debug:
