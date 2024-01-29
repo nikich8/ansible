@@ -1,11 +1,11 @@
 - name: checking data types
   hosts: localhost
   vars:
-    NAME: "Shiva" #key value
-    Skills:  # skils is list type
-    - "Devops"
-    - "Shell"
-    - "Ansible"
+    NAME: Shiva #key value
+    Skils:  # skils is list type
+    - Devops
+    - Shell
+    - Ansible
     Experience: #map type
       Devops: 5
       AWS: 3
@@ -18,7 +18,7 @@
 
   - name: print list
     ansible.builtin.debug:
-      msg: "Skills: {{skills}}"
+      msg: "Skils: {{skils}}"
 
   - name: print map
     ansible.builtin.debug:
