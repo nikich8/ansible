@@ -1,0 +1,13 @@
+- name: loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: download packages
+    ansible.builtin.packages:
+      name: " {{item}}"
+      state: present 
+    loop: # to refer all memors, user iteam(default key) in ansible
+    - git
+    - mysql
+     
+    
