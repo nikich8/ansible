@@ -5,7 +5,11 @@
     ansible.builtin.command: id roboshop
     register: user  #variable name
     ignore_errors: true
-    
+
   - name: print variable value
     ansible.builtin.debug:
       msg: "user output is: {{user}}"
+
+  - name: print exit ststus or return code
+    ansible.builtin.debug:
+      msg: "status is: {{user.rc}}"
