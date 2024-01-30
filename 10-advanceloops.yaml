@@ -1,0 +1,13 @@
+- name: loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: install or uninstall package
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}}" 
+    loop: # to refer all memors, user iteam(default key) in ansible
+    - {name: 'git', stste:'present'}
+    - {name: 'mysql', stste:'obsent'}
+    - {name: 'nginx', stste:'present'}
+     
