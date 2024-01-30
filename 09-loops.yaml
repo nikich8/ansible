@@ -2,9 +2,9 @@
   hosts: localhost
   become: yes
   tasks:
-  - name: download packages
-    ansible.builtin.packages:
-      name: " {{item}}"
+  - name: print package
+    ansible.builtin.package:
+      name: "{{item}}"
       state: present 
     loop: # to refer all memors, user iteam(default key) in ansible
     - git
