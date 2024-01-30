@@ -1,0 +1,12 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: print persons
+    ansible.builtin.debug:
+      msg: "hello {{item}}" 
+    loop: # to refer all memors, user iteam(default key) in ansible
+    - Ramesh
+    - Suresh
+    - Ravi
+    - Rahim
+
