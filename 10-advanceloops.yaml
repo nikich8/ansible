@@ -7,7 +7,7 @@
       name: "{{item.name}}"
       state: "{{item.state}}" 
     loop: # to refer all memors, user iteam(default key) in ansible
-    - {name: 'git', stste:'present'}
-    - {name: 'mysql', stste:'obsent'}
-    - {name: 'nginx', stste:'present'}
+    - {name: 'git', staste: 'present'}
+    - {name: 'mysql', staste: 'obsent'}
+    - {name: 'nginx', staste: 'present'}
      
