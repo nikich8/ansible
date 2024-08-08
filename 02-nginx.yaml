@@ -1,12 +1,12 @@
-- name: install and run nginx 
-  hosts: web # whitch host
-  become: yes #for root 
+- name: install and run nginx
+  become: true
+  hosts: web
   tasks:
-  - name: install nginx package #task1
+  - name: install nginx package
     ansible.builtin.package:
       name: nginx
-      state: present
-  - name: run nginx # task 2
+      status: present
+  - name: run nginx
     ansible.builtin.service:
       name: nginx
-      state: started 
+      status: started
