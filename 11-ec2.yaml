@@ -1,0 +1,19 @@
+- name: Create an EC2 instance
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Launch EC2 instance
+      amazon.aws.ec2_instance:
+        name: my_instance
+        key_name: your_key_pair
+        instance_type: t2.micro
+        image_id: ami-0b4f379183e5706b9  # Update with the AMI ID for your region
+        region: us-east-1
+        wait: yes
+        tags:
+          Name: MyInstance
+      register: ec2
+
+    - name: Output the instance information
+      debug:
+        msg: "Instance ID: {{ ec2.instance_ids[0] }} IP Address: {{ ec2.instances[0].public_ip_address }}"
