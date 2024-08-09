@@ -1,5 +1,5 @@
 - name: play-1
-  hosts: node
+  hosts: web
   vars:
     course: "Devops"
     Trainer: "Susmitha"
